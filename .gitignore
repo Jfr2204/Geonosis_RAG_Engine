@@ -1,0 +1,9 @@
+.env
+
+models/*
+
+vectordb/*
+vectordb_original/*
+vectordb_hnsw_reducido/*
+
+data/*
