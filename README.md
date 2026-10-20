@@ -75,18 +75,6 @@ archivo (bytes) → archivo temporal → parseo → chunking → control de cuot
 5. **Selección dinámica**: umbral adaptativo y diversidad; para preguntas de tipo listado se prioriza la cobertura.
 6. **Generación**: el LLM responde condicionado por el contexto y se sintetizan las respuestas parciales en una sola.
 
-### Decisiones técnicas
-
-| Decisión | Justificación |
-|---|---|
-| `text-embedding-3-large` | Frente a `all-MiniLM-L6-v2`, encontró información relevante sobre un gen en como máximo 5 chunks, contra 10 a 20 del modelo local. |
-| `gpt-4o-mini` | Superó ampliamente a Mistral 7B local en calidad, con un costo bajo para el alcance del proyecto. |
-| ChromaDB local | Evita los costos de almacenamiento vectorial en la nube. |
-| `RecursiveCharacterTextSplitter` / `HybridChunker` | Similar calidad que los chunkers semánticos, con mucha menos exigencia de cómputo (sin GPU). |
-| Una fila por chunk en tablas | Preserva la coherencia semántica de cada registro gen-fenotipo-enfermedad. |
-| Nombre de archivo único | Permite eliminar de forma precisa todos los embeddings de un documento y evita mezclar versiones de una misma fuente. |
-| LangChain sin agentes | Mayor control y claridad sobre el flujo del pipeline. |
-
 ## 🛠️ Stack
 
 **Python 3.11** · LangChain · Docling · ChromaDB · OpenAI (`text-embedding-3-large`, `gpt-4o-mini`) · Sentence Transformers / Transformers · NumPy · Pandas · python-dotenv
