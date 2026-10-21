@@ -224,8 +224,7 @@ Los métodos lanzan `ValueError` con mensajes descriptivos en casos como: archiv
 - **Milko J. Gomez Boquete**
 - **Juan Facundo Rivero**
 
-**Director:** Dra. Leticia C. Cagnina · **Co-Directora:** Dra. Lucía Spangenberg
-Universidad Nacional de San Luis · Ingeniería en Informática
+**Director:** Dra. Leticia C. Cagnina - Universidad Nacional de San Luis · **Co-Directora:** Dra. Lucía Spangenberg - Institut Pasteur de Montevideo
 
 ## 📄 Licencia
 
